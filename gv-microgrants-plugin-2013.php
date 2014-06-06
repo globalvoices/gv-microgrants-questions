@@ -9,6 +9,33 @@ Author URI: http://simianuprising.com/
 */ 
 
 /**
+ * Register custom gv sponsors for this site
+ */
+function gv_register_sponsors_microgrants2013 () {
+	global $gv;
+	
+	if (!is_object($gv))
+		return;
+	
+	/**
+	 * Sponsors definition to be used by gv_get_sponsors()
+	 */
+	$gv->sponsors = array(
+		'omidyar' => array(
+			"name" => "Omidyar Network",
+			"slug" => "omidyar",
+			'description' => 'Omidyar Network - Every person has the power to make a difference.',
+			"url" => "http://www.omidyar.com/",
+			'status' => 'featured',
+			),
+	);
+}
+/**
+ * Add it to 'init' at very low priority, so it should run after default definition and override it
+ */
+add_action('init', 'gv_register_sponsors_microgrants2013', 999);
+
+/**
  * Register custom postmeta fields with the Custom Medatata Manager plugin
  *
  * Convert to some other format if this ever stops working
