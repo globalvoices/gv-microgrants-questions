@@ -67,7 +67,7 @@ function gv_microgrants_2014_global_custom_metadata_manager_admin_init() {
 	 */
 	x_add_metadata_field( 'proposal-participants', array('post'), array(
 		'group' => 'gv_custom_metadata_posts',
-		'label' => '¿Cuantas personas que participarán en las capacitaciones del proyecto?',
+		'label' => '¿Cuantas personas participarán en las capacitaciones del proyecto?',
 		'field_type' => 'textarea',
 	));
 	/**
@@ -123,7 +123,7 @@ function gv_microgrants_2014_global_custom_metadata_manager_admin_init() {
 	 */
 	x_add_metadata_field( 'proposal-budget', array('post'), array(
 		'group' => 'gv_custom_metadata_posts',
-		'label' => 'Proporcione un presupuesto detallado de hasta US$3,500.00 (tres mil quinientos dólares americanos) para gastos de funcionamiento.',
+		'label' => 'Proporcione un presupuesto detallado de hasta US$3,500.00 para gastos de funcionamiento.',
 		'field_type' => 'textarea',
 	));
 	/**
@@ -308,7 +308,7 @@ function gv_microgrants_2014_global_register_postmeta_inserts() {
 
 	gv_register_postmeta_insert(array(
 		'taxonomy' => 'gv_tools',
-		'label' => 'Elija la principal herramienta o medio de comunicación digital que su proyecto va a usar (sólo escoja la herramienta principal que será utilizada por los participantes para crear contenido).',
+		'label' => 'Elija la principal herramienta o medio de comunicación digital que su proyecto va a usar.',
 		'position' => 'bottom',
 	));		
 
@@ -326,7 +326,7 @@ function gv_microgrants_2014_global_register_postmeta_inserts() {
 
 	gv_register_postmeta_insert(array(
 		'postmeta_field_name' => 'proposal-participants',
-		'label' => '¿Cuantas personas que participarán en las capacitaciones del proyecto?',
+		'label' => '¿Cuantas personas participarán en las capacitaciones del proyecto?',
 		'position' => 'bottom',
 	));
 
@@ -368,7 +368,7 @@ function gv_microgrants_2014_global_register_postmeta_inserts() {
 
 	gv_register_postmeta_insert(array(
 		'postmeta_field_name' => 'proposal-budget',
-		'label' => 'Proporcione un presupuesto detallado de hasta US$3,500.00 (tres mil quinientos dólares americanos) para gastos de funcionamiento.',
+		'label' => 'Proporcione un presupuesto detallado de hasta US$3,500.00 para gastos de funcionamiento.',
 		'position' => 'bottom',
 	));
 
