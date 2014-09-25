@@ -9,6 +9,23 @@ Author URI: http://simianuprising.com/
 */ 
 
 /**
+ * Change sponsors logo directory to use old one and add some CSS to have the right background
+ * 
+ * Needed to avoid re-creating the logos as light on dark
+ * 
+ * @global type $gv
+ * @param type $param
+ */
+function gv_microgrants_amazonia_es_fake_functionsphp($param) {
+	global $gv;
+	if (is_object($gv)) :
+		$gv->dir['sponsor_badges'] = $gv->dir['static'] . "img/tmpl/funders/";
+	endif;
+	echo "<style type='text/css'>.sponsors-badges{background:#f7f7f7;padding:.75rem;}</style>";
+}
+add_action('wp_head', 'gv_microgrants_amazonia_es_fake_functionsphp');
+
+/**
  * Register custom postmeta fields with the Custom Medatata Manager plugin
  *
  * Convert to some other format if this ever stops working
